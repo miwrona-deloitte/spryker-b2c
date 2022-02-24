@@ -17,11 +17,12 @@ class IndexController extends AbstractController
      */
     public function indexAction(Request $request)
     {
-        $data = ['helloWorld' => 'Hello Spryker!'];
-        return $this->view(
-            $data,
-            [],
-            '@HelloSpryker/views/index/index.twig'
-        );
-    }
+        $data = ['reversedString' => 'Hello Spryker!'];
+        
+                return $this->view(
+        $data,
+                    [],
+        '@HelloSpryker/views/index/index.twig'
+                );
+        }
 }

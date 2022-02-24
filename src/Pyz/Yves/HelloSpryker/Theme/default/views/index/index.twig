@@ -1,11 +1,11 @@
 {% extends template('page-layout-main') %}
 
 {% define data = {
-helloWorld: _view.helloWorld
+reversedString: _view.reversedString
 } %}
 
 {% block content %}
     <div>
-        <h2>{{ data.helloWorld }}</h2>
+        <h2>{{ data.reversedString }}</h2>
     </div>
 {% endblock %}
