@@ -2,6 +2,7 @@
 
 namespace Pyz\Zed\HelloSpryker\Business;
 
+use Generated\Shared\Transfer\HelloSprykerTransfer;
 use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
@@ -15,14 +16,14 @@ class HelloSprykerFacade extends AbstractFacade
      * 
      * @api
      * 
-     * @param string $stringToReverse
+     * @param HelloSprykerTransfer $stringToReverse
      * 
-     * @return string
+     * @return HelloSprykerTransfer
      */
-    public function reverseString(string $stringToReverse): string
+    public function reverseString(HelloSprykerTransfer $helloSprykerTransfer): HelloSprykerTransfer
     {
         return $this->getFactory()
             ->createStringReverser()
-            ->reverseString($stringToReverse);
+            ->reverseString($helloSprykerTransfer);
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Pyz\Zed\HelloSpryker\Business;
 
+use Generated\Shared\Transfer\HelloSprykerTransfer;
+
 interface HelloSprykerFacadeInterface
 {
 /**
@@ -10,9 +12,9 @@ interface HelloSprykerFacadeInterface
      * 
      * @api
      * 
-     * @param string $stringToReverse
+     * @param HelloSprykerTransfer $stringToReverse
      * 
-     * @return string
+     * @return HelloSprykerTransfer
      */
-    public function reverseString(string $stringToReverse): string;
+    public function reverseString(HelloSprykerTransfer $stringToReverse): HelloSprykerTransfer;
 }
