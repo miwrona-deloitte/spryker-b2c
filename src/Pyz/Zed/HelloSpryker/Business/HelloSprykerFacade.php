@@ -26,4 +26,32 @@ class HelloSprykerFacade extends AbstractFacade
             ->createStringReverser()
             ->reverseString($helloSprykerTransfer);
     }
+
+    /**
+     * @inheritDoc
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\HelloSprykerTransfer $helloSprykerTransfer
+     *
+     * @return \Generated\Shared\Transfer\HelloSprykerTransfer
+     */
+    public function createHelloSprykerEntity(HelloSprykerTransfer $helloSprykerTransfer): HelloSprykerTransfer
+    {
+        return $this->getFactory()->createStringWriter()->createHelloSprykerEntity($helloSprykerTransfer);
+    }
+
+    /**
+     * @inheritDoc
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\HelloSprykerTransfer $helloSprykerTransfer
+     *
+     * @return \Generated\Shared\Transfer\HelloSprykerTransfer
+     */
+    public function findHelloSpryker(HelloSprykerTransfer $helloSprykerTransfer): HelloSprykerTransfer
+    {
+        return $this->getFactory()->createStringReader()->findHelloSpryker($helloSprykerTransfer);
+    }
 }

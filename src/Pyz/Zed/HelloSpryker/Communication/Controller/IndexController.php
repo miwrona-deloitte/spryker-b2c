@@ -18,10 +18,15 @@ class IndexController extends AbstractController
      */
     public function indexAction(Request $request)
     {
-        $originalString = 'Hello Spryker! 1';
         $helloSprykerTransfer = new HelloSprykerTransfer();
         $helloSprykerTransfer->setOriginalString("Hello Spryker!");
         $helloSprykerTransfer = $this->getFacade()->reverseString($helloSprykerTransfer);
+
+        // Create new row in DB.
+        $helloSprykerTransfer = $this->getFacade()->createHelloSprykerEntity($helloSprykerTransfer);
+
+        // Retrieve data from DB.
+        $helloSprykerTransfer = $this->getFacade()->findHelloSpryker($helloSprykerTransfer);
         return ['string' => $helloSprykerTransfer->getReversedString()];
     }
 }
