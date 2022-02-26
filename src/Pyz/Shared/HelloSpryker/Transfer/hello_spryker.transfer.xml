@@ -2,5 +2,6 @@
     <transfer name="HelloSpryker">
         <property name="originalString" type="string" />
         <property name="reversedString" type="string" />
+        <property name="idHelloSpryker" type="int"/>
     </transfer>
 </transfers>
