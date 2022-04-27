@@ -7,6 +7,7 @@
 
 namespace Pyz\Zed\Installer;
 
+use Pyz\Zed\Customer\Communication\Plugin\Installer\CustomerInstallerPlugin;
 use Spryker\Zed\Acl\Communication\Plugin\AclInstallerPlugin;
 use Spryker\Zed\Country\Communication\Plugin\CountryInstallerPlugin;
 use Spryker\Zed\CustomerAccess\Communication\Plugin\CustomerAccessInstallerPlugin;
@@ -47,6 +48,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
             new OauthClientInstallerPlugin(),
             new OauthCustomerScopeInstallerPlugin(),
             new AgentOauthScopeInstallerPlugin(),
+            new CustomerInstallerPlugin()
         ];
     }
 }
